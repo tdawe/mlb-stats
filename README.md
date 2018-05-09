@@ -1,2 +1,2 @@
 # mlb-stats
-Analysis of MLB data
+Analysis of historical MLB data
