@@ -7,5 +7,8 @@ data:
 	csvs-to-sqlite baseballdatabank*/core/*.csv database.db
 	echo .quit | sqlite3 -init custom.sql database.db
 
+sample:
+	./batting.sh 1992 TOR
+
 clean:
 	rm -rf baseballdatabank* database.db data.tar.gz
