@@ -8,4 +8,4 @@ data:
 	sqlite --init custom.sql database.db
 
 clean:
-	rm -rf baseballdatabank* database.db
+	rm -rf baseballdatabank* database.db data.tar.gz
