@@ -12,7 +12,7 @@ scalingSpeed=`bc <<< "scale=4; 100/$maxSpeed"`
 echo "Max Power from $1 is $maxPower and scaling is $scalingPower"
 echo "Max Speed from $1 is $maxSpeed and scaling is $scalingSpeed"
 
-load_extension="select load_extension(\"./libsqlitefunctions.so\");"
+load_extension="select load_extension(\"./libsqlitefunctions\");"
 f1_speed="(20.0 * (((SB + 3.0)/(SB + CS + 7.0)) - 0.4))"
 f2_speed="((1/0.07) * sqrt((SB + CS + 0.0)/(\"1B\" + BB + HBP + 0.0)))"
 f3_speed="(625 * ((\"3B\") / (AB + HR + SO + 0.0)))"
