@@ -16,6 +16,6 @@ f5_speed="((1/0.007) * (0.063 - (GIDP/(AB-HR-SO+0.0))))"
 f6_speed="TODO"
 final_speed_calculation="($f1_speed + $f2_speed + $f3_speed + $f4_speed + $f5_speed) / 5"
 
-#sqlite3 -header -column database.db "$load_extension select nameFirst, nameLast, cast(((SLG-AVG)*1000)/3*$scalingPower as integer) as Power, round($final_speed_calculation * 10) as Speed from Batting left join People on "Batting".playerId = "People".playerId where teamId='$2' and yearId='$1' and AB > 100 order by Speed asc;"
+sqlite3 -header -column database.db "$load_extension select nameFirst, nameLast, cast(((SLG-AVG)*1000)/3*$scalingPower as integer) as Power, round($final_speed_calculation * 10) as Speed from Batting left join People on "Batting".playerId = "People".playerId where teamId='$2' and yearId='$1' and AB > 100 order by Speed asc;"
 
-sqlite3 -header -column database.db "select nameFirst, nameLast, cast(((SLG-AVG)*1000)/3*$scalingPower as integer) as Power from Batting left join People on "Batting".playerId = "People".playerId where teamId='$2' and yearId='$1' and AB > 100 order by Power asc;"
+#sqlite3 -header -column database.db "select nameFirst, nameLast, cast(((SLG-AVG)*1000)/3*$scalingPower as integer) as Power from Batting left join People on "Batting".playerId = "People".playerId where teamId='$2' and yearId='$1' and AB > 100 order by Power asc;"
