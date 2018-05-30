@@ -4,7 +4,7 @@ data:
 	curl -L --output data.tar.gz https://github.com/chadwickbureau/baseballdatabank/archive/v2018.1.tar.gz
 	pip install --user csvs-to-sqlite
 	tar -xzvf data.tar.gz
-	csvs-to-sqlite baseballdatabank*/core/Batting.csv database.db
+	csvs-to-sqlite baseballdatabank*/core/Batting.csv baseballdatabank*/core/People.csv database.db
 	echo .quit | sqlite3 -init custom.sql database.db
 
 extensions:
