@@ -9,7 +9,7 @@ data:
 
 extensions:
 	curl --output extensions.c http://www.sqlite.org/contrib/download/extension-functions.c?get=25
-	gcc -fPIC -lm -shared extensions.c -o libsqlitefunctions.so
+	gcc -fPIC -shared extensions.c -o libsqlitefunctions.so -lm
 
 sample:
 	./batting.sh 1992 TOR
